@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <div class="parent">
     <h1>Twitter</h1>
     <ul>
       <twitter-item v-for="(item, index) in tweets" :key="index" :item="item"></twitter-item>
@@ -41,7 +41,10 @@ export default {
           tweet: 'Beauty in the struggle, ugliness in the success.',
           likes: 18,
         }
-      ]
+      ],
+      newTweet: {
+        tweet: "",
+      }
     }
   },
   components: {
@@ -58,4 +61,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+.parent{
+  align-items: flex-start;
+}
 </style>
